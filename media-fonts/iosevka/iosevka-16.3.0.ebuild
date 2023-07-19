@@ -16,5 +16,9 @@ KEYWORDS="~amd64 ~arm ~arm64 ~loong ~ppc64 ~riscv ~x86"
 BDEPEND="app-arch/unzip"
 
 S="${WORKDIR}"
-FONT_S="${S}"
-FONT_SUFFIX="ttc"
+
+src_install() {
+	FONT_S="${S}"
+	FONT_SUFFIX="ttc"
+	font_src_install
+}
