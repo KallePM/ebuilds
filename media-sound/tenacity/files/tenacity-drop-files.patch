@@ -1,0 +1,18 @@
+--- a/src/CMakeLists.txt	2023-07-20 12:50:37.796854055 +0200
++++ b/src/CMakeLists.txt	2023-07-20 12:53:43.982824317 +0200
+@@ -1392,15 +1392,10 @@
+                FILES_MATCHING PATTERN "*.so*" )
+       install( FILES "${_INTDIR}/${APP_NAME}.desktop"
+                DESTINATION "${_DATADIR}/applications" )
+-      install( FILES "${CMAKE_SOURCE_DIR}/LICENSE.txt" "${CMAKE_SOURCE_DIR}/README.md"
+-               DESTINATION "${_DATADIR}/doc/${APP_NAME}" )
+       install( FILES "${_SRCDIR}/tenacity.xml"
+                DESTINATION "${_DATADIR}/mime/packages" )
+       install( FILES "${CMAKE_SOURCE_DIR}/presets/EQDefaultCurves.xml"
+                DESTINATION "${_PKGDATA}" )
+-      install( PROGRAMS "${PROJECT_SOURCE_DIR}/linux/tenacity.sh"
+-               DESTINATION "."
+-               RENAME "tenacity" )
+    endif()
+ endif()
+ 
